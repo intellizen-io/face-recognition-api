@@ -13,9 +13,9 @@ This server helps us to work efficiently with the microservices methodology.
 ## Usage
 * Run the python file flask-server.py
 
-## The example client may assist you - client.py
-
 ## Troubleshooting
+
+### The example client may assist you - client.py
 
 ### ERROR: Failed building wheel for dlib
 
