@@ -1,5 +1,7 @@
 # Face Recognition Flask Endpoints
 
+* This server has been tested only on ubuntu 20.04 os.
+
 ## Description
 This server helps us to work efficiently with the microservices methodology.
 
@@ -12,3 +14,11 @@ This server helps us to work efficiently with the microservices methodology.
 * Run the python file flask-server.py
 
 ## The example client may assist you - client.py
+
+## Troubleshooting
+
+### ERROR: Failed building wheel for dlib
+
+* sudo apt-get install build-essential cmake
+* sudo apt-get install libgtk-3-dev
+* sudo apt-get install libboost-all-dev
