@@ -1,0 +1,11 @@
+requests~=2.27.1
+Flask~=2.0.3
+
+# face recognitions
+face_recognition_models
+deepface~=0.0.75
+Click>=6.0
+dlib>=19.3.0
+numpy~=1.23.3
+Pillow~=9.0.1
+scipy>=0.17.0
