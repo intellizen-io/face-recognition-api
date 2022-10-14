@@ -1,26 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import os
+import io
 import sys
-import time
 import json
 import base64
 import struct
 import logging
-import hashlib
-import requests
-import threading
-from typing import Union
-from datetime import datetime, timedelta
 import face_recognition
 from typing import Union
-from PIL import Image
-import io
-import numpy as np
-# from numpy import ndarray
-from deepface import DeepFace
-from flask import Flask, request, jsonify, Response
+from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 backends = [
