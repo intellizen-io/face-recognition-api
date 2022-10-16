@@ -42,7 +42,7 @@ def verify_json_structure(keys: list = None) -> Union[dict, tuple]:
 @app.route('/face-exists', methods=['POST'])
 def face_exists():
     payload = verify_json_structure(['image_bytes'])
-    image_data = base64.b64decode(payload['image_bytes'])
+    image_data = base64.b64decode(eval(payload['image_bytes']))
 
     images_np_data = face_recognition.load_image_file(io.BytesIO(image_data))
     locations = face_recognition.face_locations(images_np_data)

@@ -2,6 +2,7 @@ requests~=2.27.1
 Flask~=2.0.3
 
 # face recognitions
+face-recognition
 face_recognition_models
 deepface~=0.0.75
 Click>=6.0
