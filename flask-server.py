@@ -4,7 +4,7 @@
 import sys
 import logging
 from core.application import app
-from helpers.loggers import get_logger
+from shared_helpers.loggers import get_logger
 
 logger = get_logger(__file__)
 

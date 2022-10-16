@@ -3,8 +3,8 @@ import base64
 import face_recognition
 from flask import request, jsonify, Blueprint
 
-from helpers.loggers import get_logger
-from helpers.conversions import verify_json_structure
+from shared_helpers.loggers import get_logger
+from shared_helpers.conversions import verify_json_structure
 
 logger = get_logger(__file__)
 blueprint = Blueprint("face_recognition_blueprint", __name__)
@@ -18,9 +18,9 @@ backends = [
 ]
 
 
-@blueprint.route('/face-exists', methods=['POST'])
-def face_exists():
-    logger.debug("Got new request to face-exists endpoint")
+@blueprint.route('/face-detection', methods=['POST'])
+def face_detection():
+    logger.debug("Got new request to face-detection endpoint")
     payload = verify_json_structure(['image_bytes'])
     image_data = base64.b64decode(eval(payload['image_bytes']))
 
@@ -29,7 +29,7 @@ def face_exists():
 
     logger.debug(f"Found {len(locations)} faces")
     return jsonify(
-        face_exists=len(locations) > 0,
+        face_detection=len(locations) > 0,
         locations=locations,
         request_came_from=request.remote_addr
     ), 200

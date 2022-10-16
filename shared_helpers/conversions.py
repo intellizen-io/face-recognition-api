@@ -1,3 +1,4 @@
+import base64
 import json
 import struct
 import logging
@@ -21,7 +22,9 @@ def image_into_bytes(image_path: str) -> bytes:
     """
     with open(image_path, "rb") as image_file:
         image_bytes = image_file.read()
-    return image_bytes
+
+    encoded = base64.b64encode(image_bytes)
+    return encoded
 
 
 def verify_json_structure(keys: list = None) -> Union[dict, tuple]:
