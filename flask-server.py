@@ -69,7 +69,7 @@ def image_into_bytes(image_path: str) -> bytes:
 if __name__ == '__main__':
     try:
         logging.info('Starting app... Press CTRL+C to quit.')
-        app.run(host="0.0.0.0", port=9000)
+        app.run(host="0.0.0.0", port=9000, processes=2)
     except KeyboardInterrupt:
         logging.info('Quitting... (CTRL+C pressed)')
         sys.exit(0)
